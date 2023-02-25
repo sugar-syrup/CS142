@@ -29,7 +29,7 @@ def evaluate(expression):
             
 print("Problem 1")
 print(evaluate([*"((1+(((5+4)-1)+(2+5)))-(3+3))"]))
-
+print("")
 
 #Problem 2
 List = [8, 4, 2, 1]
@@ -59,6 +59,7 @@ def merge(left, right):
 print("Problem 2")
 merge_sort(List)
 print(count)
+print("")
 
 #Problem 3
 #Insertion sort, but using binary sort for comparing, rather than looping through every element
@@ -88,6 +89,7 @@ a = [4,66,23,12,67,49,22,11]
 print("Problem 3")
 insertionSort(a)
 print(a)
+print("")
 
 #Problem 4
 def find_median(arr1, arr2):

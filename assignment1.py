@@ -12,6 +12,7 @@ def ntom(n,m,mult_counter=0): #mult_counter calculates the number of multiplicat
 
 print("[Problem 1]: ")
 print(ntom(2,61))
+print("")
 
 #[Problem 2]
 
@@ -40,7 +41,8 @@ def findSingle(List):
 
 print("[Problem 2(b)]")
 findSingle([1,1,2,2,3,4,4,5,5,6,7,6,7])
-    
+print("")
+
 #[Problem 3]
 
 #[Part 1]
@@ -110,7 +112,7 @@ def ThisSort(List,k):
     
 print("[Problem 3(b)]")
 print(ThisSort([31,12,21,55,22,1,51,30,2,7],3))
-
+print("")
 
 #[Problem 4]
 def inversion(List):
