@@ -100,6 +100,8 @@ print(Palindrome(l1))
 
 # Problem 3 
 
+# Merge Sort
+
 def appendToLink(Linked_List:LinkedList,alpha,num):
     node = Node(alpha,num)
     Linked_List.insertAtEnd(node)
@@ -156,4 +158,41 @@ def merge(left,right):
 
 print("[Problem 3(b)]- Merge sort")
 merge_sort(l1).print_list()
+
+# Insertion Sort
+
+def insertionSort(Linked_List:LinkedList):
+  Out_array = LinkedList() # Already sorted list
+  current = Linked_List.head
+  while current != None:
+    outPointer = Out_array.head
+    if outPointer == None:
+      Out_array.head = Node(current.alpha,current.num)
+    elif outPointer.num > current.num:
+      tmp = Out_array.head
+      Out_array.head = Node(current.alpha,current.num,tmp)
+    else: # the faulty part
+      while True:
+        if outPointer.next == None:
+          appendToLink(Out_array,current.alpha,current.num)
+          break
+        elif outPointer.next.num < current.num:
+          outPointer = outPointer.next
+        else: 
+          tmp = outPointer.next
+          outPointer.next = Node(current.alpha,current.num,tmp)
+          break
+    current = current.next
+  return Out_array
+
+l2 = LinkedList(Node("a",7))
+l2.insertAtEnd(Node("b",8))
+l2.insertAtEnd(Node("h",1))
+l2.insertAtEnd(Node("j",4))
+l2.insertAtEnd(Node("u",2))
+l2.insertAtEnd(Node("k",0))
+
+print("[Problem 3(a)]- Insertion Sort")
+insertionSort(l2).print_list()
+
 
